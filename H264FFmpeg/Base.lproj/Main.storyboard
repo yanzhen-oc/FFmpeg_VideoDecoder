@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hVu-hI-vzH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ffmpeg-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-qr-Byy">
+                                <rect key="frame" x="187.5" y="208.5" width="187.5" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EgA-qr-Byy" secondAttribute="height" multiplier="3:4" id="PqL-Bm-eFU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zv7-VD-Cw9">
+                                <rect key="frame" x="0.0" y="208.5" width="187" height="250"/>
+                                <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EgA-qr-Byy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="65n-hU-3pg"/>
+                            <constraint firstItem="Zv7-VD-Cw9" firstAttribute="top" secondItem="EgA-qr-Byy" secondAttribute="top" id="7rb-wW-hyW"/>
+                            <constraint firstItem="EgA-qr-Byy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LFC-Nj-G81"/>
+                            <constraint firstItem="Zv7-VD-Cw9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFl-sX-m1U"/>
+                            <constraint firstItem="EgA-qr-Byy" firstAttribute="leading" secondItem="Zv7-VD-Cw9" secondAttribute="trailing" constant="0.5" id="YmN-rp-Cbu"/>
+                            <constraint firstItem="Zv7-VD-Cw9" firstAttribute="bottom" secondItem="EgA-qr-Byy" secondAttribute="bottom" id="qPH-4K-sc2"/>
+                            <constraint firstItem="EgA-qr-Byy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qc9-bS-2zh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ffmpeg" id="VIO-NC-jut">
+                        <barButtonItem key="rightBarButtonItem" title="Start" id="1hV-JG-Bdy">
+                            <connections>
+                                <action selector="start:" destination="BYZ-38-t0r" id="3XC-v9-C24"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="localView" destination="EgA-qr-Byy" id="T2S-y1-Ox2"/>
+                        <outlet property="showView" destination="Zv7-VD-Cw9" id="Va9-Jy-u25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="169.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pvT-D0-YWw">
+            <objects>
+                <navigationController id="hVu-hI-vzH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="beF-jm-isA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uVy-4M-ov4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZC-CG-60w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-598" y="177"/>
+        </scene>
+    </scenes>
+</document>
